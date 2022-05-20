@@ -1,0 +1,13 @@
+package AssertionPractice;
+
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class SoftAssertPractice {
+
+SoftAssert soft=new SoftAssert();
+@Test
+public void sample1() {
+	soft.assertEquals('R', 'S');
+}
+}

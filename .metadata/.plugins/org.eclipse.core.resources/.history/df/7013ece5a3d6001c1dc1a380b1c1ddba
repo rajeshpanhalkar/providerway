@@ -1,0 +1,19 @@
+package Parameterisation;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class AllBrowserTesting {
+@Test
+public void CrossrowserTesting(String browser) {
+	if(browser.equalsIgnoreCase("Chrome")) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\Selenium Jar Files\\chromedriver_win32(101)\\chromedriver.exe\\");
+		WebDriver driver=new ChromeDriver();
+	}else if(browser.equalsIgnoreCase("firefox")) {
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\Admin\\Desktop\\Selenium Jar Files\\geckodriver\\geckodriver-v0.31.0-win64.zip\\");
+	}else {
+		System.out.println("Wrong browser is selected");
+	}
+}
+}
